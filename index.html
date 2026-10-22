@@ -3,9 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daylon Naidoo — Full-Stack Developer &amp; IT Specialist</title>
-  <meta name="description" content="Portfolio of Daylon Naidoo, Full-Stack Developer and IT Specialist based in Paarl, South Africa. Practical Technology, Reliable Solutions, Real Results." />
-  
+  <title>Daylon Naidoo — Full-Stack Developer &amp; IT Specialist | Paarl, South Africa</title>
+  <meta name="description" content="Daylon Naidoo — Full-Stack Developer &amp; IT Specialist in Paarl, South Africa. Practical technology, web development, custom applications, automation, and reliable IT solutions." />
+  <meta name="keywords" content="Daylon Naidoo, Full-Stack Developer, IT Specialist, Web Development, Automation, IT Support, Paarl, South Africa, Firebase, Python, FastAPI" />
+  <meta name="author" content="Daylon Naidoo" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Daylon Naidoo — Full-Stack Developer &amp; IT Specialist" />
+  <meta property="og:description" content="Practical Technology. Reliable Solutions. Real Results. Professional web development, custom applications, automation, and IT solutions." />
+  <meta property="og:image" content="assets/images/daylon-portrait.jpg" />
+  <meta property="og:locale" content="en_ZA" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -15,43 +27,1111 @@
         extend: {
           colors: {
             brand: {
-              50: '#f0fdf4',
-              100: '#dcfce7',
-              500: '#22c55e',
-              600: '#16a34a',
-              700: '#15803d',
-              accent: '#3b82f6',
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              200: '#a7f3d0',
+              400: '#34d399',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+              800: '#065f46',
+              900: '#064e3b',
+            },
+            surface: {
+              card: '#0f172a',
+              cardHover: '#1e293b',
+              border: '#334155'
             }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            heading: ['Outfit', 'Inter', 'sans-serif'],
           }
         }
       }
     }
   </script>
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Inter & Outfit -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, h4, h5, .font-heading { font-family: 'Outfit', sans-serif; }
+    .glass-card {
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(51, 65, 85, 0.6);
     }
-    h1, h2, h3, h4, .font-heading {
-      font-family: 'Outfit', sans-serif;
+    .glass-nav {
+      background: rgba(11, 15, 25, 0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(51, 65, 85, 0.5);
     }
   </style>
 </head>
-<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col antialiased selection:bg-emerald-500 selection:text-slate-950">
-  <div id="app" class="flex-grow flex items-center justify-center p-8">
-    <div class="max-w-xl text-center space-y-4">
-      <h1 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight">Daylon Naidoo</h1>
-      <p class="text-emerald-400 font-medium text-lg">Full-Stack Developer &amp; IT Specialist</p>
-      <p class="text-slate-400">[Initial Setup — Awaiting Step 3 Implementation]</p>
-    </div>
-  </div>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col antialiased selection:bg-brand-500 selection:text-slate-950">
 
-  <script src="app.js"></script>
+  <!-- ==================== HEADER & NAVBAR ==================== -->
+  <header id="site-header" class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Identity -->
+        <a href="#home" class="flex items-center gap-3 group" aria-label="Daylon Naidoo Home">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-emerald-400 flex items-center justify-center text-slate-950 font-heading font-extrabold text-xl shadow-lg shadow-brand-500/20 group-hover:scale-105 transition-transform">
+            DN
+          </div>
+          <div class="flex flex-col">
+            <span class="font-heading font-bold text-lg text-white group-hover:text-brand-400 transition-colors">Daylon Naidoo</span>
+            <span class="text-xs text-slate-400">Full-Stack Dev &bull; IT Specialist</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-1 xl:gap-2 text-sm font-medium text-slate-300" aria-label="Main Navigation">
+          <a href="#home" class="px-3 py-2 rounded-lg hover:text-white hover:bg-slate-800/60 transition-colors">Home</a>
+          <a href="#about" class="px-3 py-2 rounded-lg hover:text-white hover:bg-slate-800/60 transition-colors">About</a>
+          <a href="#services" class="px-3 py-2 rounded-lg hover:text-white hover:bg-slate-800/60 transition-colors">Services</a>
+          <a href="#availability" class="px-3 py-2 rounded-lg hover:text-white hover:bg-slate-800/60 transition-colors">Availability</a>
+          <a href="#location" class="px-3 py-2 rounded-lg hover:text-white hover:bg-slate-800/60 transition-colors">Location</a>
+          <a href="#why-hire-me" class="px-3 py-2 rounded-lg hover:text-white hover:bg-slate-800/60 transition-colors">Why Hire Me</a>
+          <a href="#rates" class="px-3 py-2 rounded-lg hover:text-white hover:bg-slate-800/60 transition-colors">Rates</a>
+        </nav>
+
+        <!-- CTA Action -->
+        <div class="hidden lg:flex items-center gap-4">
+          <a href="#contact" class="px-5 py-2.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-slate-950 font-semibold text-sm transition-all shadow-md shadow-brand-500/20 hover:shadow-brand-500/30 hover:scale-[1.02] active:scale-[0.98]">
+            Discuss Your Project
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-brand-500" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-slate-950/95 border-b border-slate-800 backdrop-blur-xl px-4 pt-3 pb-6 space-y-1">
+      <a href="#home" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-slate-200 hover:bg-slate-800/70 hover:text-brand-400 font-medium">Home</a>
+      <a href="#about" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-slate-200 hover:bg-slate-800/70 hover:text-brand-400 font-medium">About</a>
+      <a href="#services" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-slate-200 hover:bg-slate-800/70 hover:text-brand-400 font-medium">Services</a>
+      <a href="#availability" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-slate-200 hover:bg-slate-800/70 hover:text-brand-400 font-medium">Availability</a>
+      <a href="#location" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-slate-200 hover:bg-slate-800/70 hover:text-brand-400 font-medium">Location</a>
+      <a href="#why-hire-me" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-slate-200 hover:bg-slate-800/70 hover:text-brand-400 font-medium">Why Hire Me</a>
+      <a href="#rates" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-slate-200 hover:bg-slate-800/70 hover:text-brand-400 font-medium">Rates</a>
+      <div class="pt-3">
+        <a href="#contact" class="mobile-nav-link block w-full text-center py-3 rounded-xl bg-brand-500 text-slate-950 font-semibold shadow-md">Discuss Your Project</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main class="flex-grow pt-20">
+
+    <!-- 1. HOME — What I Do and Who I Help -->
+    <section id="home" class="relative py-20 lg:py-28 overflow-hidden">
+      <!-- Glow background decoration -->
+      <div class="absolute -top-40 right-1/4 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute top-1/2 -left-20 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Hero Text -->
+          <div class="lg:col-span-7 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-400 text-xs sm:text-sm font-medium">
+              <span class="w-2 h-2 rounded-full bg-brand-400 animate-pulse"></span>
+              Available for Freelance &amp; Contract Projects
+            </div>
+
+            <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15]">
+              Practical Technology. <br />
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-emerald-200">Reliable Solutions.</span> <br />
+              Real Results.
+            </h1>
+
+            <p class="text-lg sm:text-xl text-slate-300 font-normal leading-relaxed">
+              I'm <strong class="text-white font-semibold">Daylon Naidoo</strong>, a full-stack developer and IT specialist based in Paarl, South Africa. I build websites, custom web applications, and automation tools that help small and medium-sized businesses work smarter, serve customers better, and simplify everyday operations.
+            </p>
+
+            <p class="text-slate-400 text-base leading-relaxed">
+              From a professional business website to a custom application that streamlines your workflow, I combine hands-on development skills with practical IT expertise to deliver solutions that work in the real world.
+            </p>
+
+            <!-- What I can help you with -->
+            <div class="pt-4 space-y-3">
+              <h2 class="text-xs font-semibold uppercase tracking-wider text-slate-400">What I can help you with:</h2>
+              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-sm text-slate-200">
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-5 h-5 text-brand-400 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                  <span>Build &amp; deploy professional websites</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-5 h-5 text-brand-400 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                  <span>Develop custom web apps &amp; backend services</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-5 h-5 text-brand-400 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                  <span>Automate tasks &amp; connect business systems</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-5 h-5 text-brand-400 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                  <span>Troubleshoot IT &amp; enhance reliability</span>
+                </li>
+                <li class="flex items-start gap-2.5 sm:col-span-2">
+                  <svg class="w-5 h-5 text-brand-400 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                  <span>Organise business data &amp; document technical processes</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- CTAs -->
+            <div class="pt-4 flex flex-wrap items-center gap-4">
+              <a href="#contact" class="px-6 py-3.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-slate-950 font-bold text-base transition-all shadow-lg shadow-brand-500/25 hover:scale-[1.02] active:scale-[0.98]">
+                Discuss Your Project
+              </a>
+              <a href="#services" class="px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 hover:border-slate-700 font-semibold text-base transition-all">
+                View My Work &amp; Services
+              </a>
+            </div>
+
+            <p class="text-sm font-medium text-slate-400 italic">
+              "Let's turn your business challenge into a working solution."
+            </p>
+          </div>
+
+          <!-- Portrait & Quick Meta -->
+          <div class="lg:col-span-5 flex flex-col items-center">
+            <div class="relative group">
+              <!-- Glow halo -->
+              <div class="absolute -inset-1.5 bg-gradient-to-tr from-brand-600 to-emerald-400 rounded-3xl blur-md opacity-40 group-hover:opacity-60 transition duration-500"></div>
+              
+              <div class="relative w-72 h-72 sm:w-80 sm:h-80 rounded-2xl overflow-hidden border-2 border-slate-700 bg-slate-900 shadow-2xl">
+                <img src="assets/images/daylon-portrait.jpg" alt="Daylon Naidoo - Full-Stack Developer &amp; IT Specialist" class="w-full h-full object-cover object-top" />
+              </div>
+
+              <!-- Location floating tag -->
+              <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 rounded-xl bg-slate-900/90 border border-slate-700 shadow-xl backdrop-blur-md flex items-center gap-2 text-xs font-semibold text-slate-200 whitespace-nowrap">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+                Paarl &bull; Western Cape &bull; South Africa
+              </div>
+            </div>
+
+            <!-- Fast stats beneath portrait -->
+            <div class="grid grid-cols-3 gap-3 w-full max-w-sm mt-8 pt-4">
+              <div class="glass-card rounded-xl p-3 text-center">
+                <span class="block text-xl font-extrabold text-white font-heading">NQF 6</span>
+                <span class="text-[11px] text-slate-400">Systems Dev</span>
+              </div>
+              <div class="glass-card rounded-xl p-3 text-center">
+                <span class="block text-xl font-extrabold text-brand-400 font-heading">Sec+</span>
+                <span class="text-[11px] text-slate-400">Distinction</span>
+              </div>
+              <div class="glass-card rounded-xl p-3 text-center">
+                <span class="block text-xl font-extrabold text-white font-heading">ITIL 4</span>
+                <span class="text-[11px] text-slate-400">Foundation</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. ABOUT — Who I Am -->
+    <section id="about" class="py-20 bg-slate-900/50 border-t border-b border-slate-800/80 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mb-12">
+          <p class="text-xs font-bold uppercase tracking-widest text-brand-400">About — Who I Am</p>
+          <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white mt-2">
+            A Developer Who Understands the Bigger Picture
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+          
+          <!-- Narrative Story -->
+          <div class="lg:col-span-7 space-y-5 text-slate-300 leading-relaxed text-base">
+            <p>
+              My name is <strong class="text-white">Daylon Naidoo</strong>. I am a full-stack developer and IT specialist with a background in Systems Development, practical IT infrastructure, and business-focused technology solutions.
+            </p>
+            <p>
+              I hold a <strong class="text-white">National Diploma in Systems Development from Boston City Campus</strong>, alongside <strong class="text-white">CompTIA A+</strong> and <strong class="text-white">CompTIA Security+</strong> certifications, with Security+ achieved with Distinction. I also hold <strong class="text-white">ITIL 4 Foundation</strong> certification, supporting my understanding of structured service management and reliable IT practices.
+            </p>
+            <p>
+              My technical experience includes <strong class="text-emerald-300">JavaScript, Python, FastAPI, PHP, Java, SQL, Firebase, and Cloud Firestore</strong>. I have built and deployed live client applications, including <em class="text-white font-semibold not-italic">Plumber R We</em> and <em class="text-white font-semibold not-italic">MNaidoo Transport</em>, with features such as quote-request forms, interactive estimators, WhatsApp integrations, and cloud-based data storage.
+            </p>
+            <p>
+              As the founder of <strong class="text-white">BC Computers</strong>, I have also managed client communication, coordinated projects, and delivered practical technical solutions.
+            </p>
+            <div class="p-4 rounded-xl bg-brand-500/10 border-l-4 border-brand-500 text-slate-200 text-sm">
+              <strong class="text-brand-400 font-semibold block mb-1">My Core Strength:</strong>
+              Combining development with infrastructure knowledge. I consider not only how an application is built, but also how it is deployed, secured, maintained, and used by real people.
+            </div>
+          </div>
+
+          <!-- Pillars / Credentials Card Deck -->
+          <div class="lg:col-span-5 space-y-4">
+            
+            <div class="glass-card rounded-2xl p-5 border border-slate-800 hover:border-slate-700 transition-all">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path></svg>
+                </div>
+                <div>
+                  <h3 class="font-heading font-bold text-white text-base">Education &amp; Qualifications</h3>
+                  <p class="text-xs text-slate-400 mt-1">National Diploma in Systems Development (NQF Level 6) &bull; Boston City Campus</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-card rounded-2xl p-5 border border-slate-800 hover:border-slate-700 transition-all">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-brand-500/10 border border-brand-500/20 text-brand-400 flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                </div>
+                <div>
+                  <h3 class="font-heading font-bold text-white text-base">Industry Certifications</h3>
+                  <p class="text-xs text-slate-400 mt-1">CompTIA Security+ (Distinction) &bull; CompTIA A+ &bull; ITIL 4 Foundation</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-card rounded-2xl p-5 border border-slate-800 hover:border-slate-700 transition-all">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                </div>
+                <div>
+                  <h3 class="font-heading font-bold text-white text-base">Verified Client Deliveries</h3>
+                  <p class="text-xs text-slate-400 mt-1">Plumber R We &bull; MNaidoo Transport &bull; First-Reply Automation Systems</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-card rounded-2xl p-5 border border-slate-800 hover:border-slate-700 transition-all">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                </div>
+                <div>
+                  <h3 class="font-heading font-bold text-white text-base">Commercial Leadership</h3>
+                  <p class="text-xs text-slate-400 mt-1">Founder of BC Computers &bull; Direct client consulting, project coordination &amp; support</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SERVICES — What I Offer -->
+    <section id="services" class="py-20 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <p class="text-xs font-bold uppercase tracking-widest text-brand-400">Services — What I Offer</p>
+          <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white mt-2">
+            Targeted Technical Services for Real-World Business
+          </h2>
+          <p class="text-slate-400 mt-3 text-base">
+            I focus on work that matches my current technical capabilities, and I agree on requirements and deliverables before beginning each project.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          <!-- Service 1: Web Development -->
+          <article class="glass-card rounded-2xl p-7 border border-slate-800 hover:border-brand-500/40 transition-all flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center mb-5">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+              </div>
+              <h3 class="font-heading font-bold text-xl text-white mb-2">Web Development</h3>
+              <p class="text-slate-300 text-sm mb-5 leading-relaxed">
+                I build responsive, professional websites that make it easier for customers to understand your services and contact your business.
+              </p>
+              <ul class="space-y-2.5 text-xs text-slate-300">
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-brand-400"></span>
+                  <span>Business websites and landing pages</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-brand-400"></span>
+                  <span>Responsive HTML5, CSS3, and JavaScript development</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-brand-400"></span>
+                  <span>Contact forms and quote-request functionality</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-brand-400"></span>
+                  <span>WhatsApp integration and customer enquiry workflows</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-brand-400"></span>
+                  <span>Basic search engine optimisation (SEO)</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-brand-400"></span>
+                  <span>Website deployment and hosting configuration</span>
+                </li>
+              </ul>
+            </div>
+            <div class="mt-6 pt-5 border-t border-slate-800 flex justify-between items-center text-xs">
+              <span class="text-slate-400">Package Starting at</span>
+              <span class="text-brand-400 font-bold font-heading text-sm">R3,500</span>
+            </div>
+          </article>
+
+          <!-- Service 2: Full-Stack Applications and Automation -->
+          <article class="glass-card rounded-2xl p-7 border border-slate-800 hover:border-brand-500/40 transition-all flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center mb-5">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+              </div>
+              <h3 class="font-heading font-bold text-xl text-white mb-2">Full-Stack Applications &amp; Automation</h3>
+              <p class="text-slate-300 text-sm mb-5 leading-relaxed">
+                When a standard website isn't enough, I develop tailored applications and tools around your business requirements.
+              </p>
+              <ul class="space-y-2.5 text-xs text-slate-300">
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
+                  <span>Custom web applications using Python, FastAPI, JavaScript, and PHP</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
+                  <span>Database integration using Cloud Firestore, SQLite, and SQL</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
+                  <span>REST API development and integrations</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
+                  <span>Interactive calculators, forms, and data-capture tools</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
+                  <span>Business workflow and lead-response automation</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
+                  <span>Firebase Hosting, deployment, and database security rules</span>
+                </li>
+              </ul>
+            </div>
+            <div class="mt-6 pt-5 border-t border-slate-800 flex justify-between items-center text-xs">
+              <span class="text-slate-400">Custom Builds From</span>
+              <span class="text-blue-400 font-bold font-heading text-sm">R8,500</span>
+            </div>
+          </article>
+
+          <!-- Service 3: IT Support and Technical Troubleshooting -->
+          <article class="glass-card rounded-2xl p-7 border border-slate-800 hover:border-brand-500/40 transition-all flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center mb-5">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+              </div>
+              <h3 class="font-heading font-bold text-xl text-white mb-2">IT Support &amp; Technical Troubleshooting</h3>
+              <p class="text-slate-300 text-sm mb-5 leading-relaxed">
+                I help individuals and small businesses resolve technical issues and keep their systems working reliably.
+              </p>
+              <ul class="space-y-2.5 text-xs text-slate-300">
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>
+                  <span>Windows operating system troubleshooting</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>
+                  <span>Hardware diagnostics and software installation</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>
+                  <span>Network connectivity and Wi-Fi troubleshooting</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>
+                  <span>TCP/IP, DNS, VPN, and remote access support</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>
+                  <span>General IT maintenance and technical problem-solving</span>
+                </li>
+              </ul>
+            </div>
+            <div class="mt-6 pt-5 border-t border-slate-800 flex justify-between items-center text-xs">
+              <span class="text-slate-400">Standard Rate</span>
+              <span class="text-purple-400 font-bold font-heading text-sm">R450 / hr</span>
+            </div>
+          </article>
+
+          <!-- Service 4: Data Organisation and Technical Documentation -->
+          <article class="glass-card rounded-2xl p-7 border border-slate-800 hover:border-brand-500/40 transition-all flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center mb-5">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+              </div>
+              <h3 class="font-heading font-bold text-xl text-white mb-2">Data Organisation &amp; Technical Documentation</h3>
+              <p class="text-slate-300 text-sm mb-5 leading-relaxed">
+                I help businesses make their information and technical processes easier to understand and manage.
+              </p>
+              <ul class="space-y-2.5 text-xs text-slate-300">
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+                  <span>Spreadsheet organisation and basic data cleaning</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+                  <span>SQL-based data queries and structured data management</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+                  <span>User guides, troubleshooting instructions, and technical documentation</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+                  <span>Standard operating procedures and knowledge-base articles</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+                  <span>Clear documentation of systems, processes, and technical fixes</span>
+                </li>
+              </ul>
+            </div>
+            <div class="mt-6 pt-5 border-t border-slate-800 flex justify-between items-center text-xs">
+              <span class="text-slate-400">Hourly / Project</span>
+              <span class="text-amber-400 font-bold font-heading text-sm">Agreed Scope</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. AVAILABILITY — When I Work -->
+    <section id="availability" class="py-20 bg-slate-900/50 border-t border-b border-slate-800/80 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mb-12">
+          <p class="text-xs font-bold uppercase tracking-widest text-brand-400">Availability — When I Work</p>
+          <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white mt-2">
+            Available for Freelance and Contract Projects
+          </h2>
+          <p class="text-slate-300 mt-3 text-base">
+            I value clear deadlines, regular communication, and realistic project planning.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <div class="glass-card rounded-2xl p-6 border border-slate-800">
+            <div class="text-brand-400 mb-3">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+            </div>
+            <h3 class="font-heading font-bold text-white text-lg">Working Days</h3>
+            <p class="text-slate-300 text-sm mt-1 font-semibold">Monday to Friday</p>
+            <p class="text-slate-400 text-xs mt-2">Dedicated weekly availability for project builds and technical support.</p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-6 border border-slate-800">
+            <div class="text-brand-400 mb-3">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            </div>
+            <h3 class="font-heading font-bold text-white text-lg">Operating Hours</h3>
+            <p class="text-slate-300 text-sm mt-1 font-semibold">08:00 – 17:00 SAST</p>
+            <p class="text-slate-400 text-xs mt-2">South African Standard Time (UTC+2) with prompt response cycles.</p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-6 border border-slate-800">
+            <div class="text-brand-400 mb-3">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+            </div>
+            <h3 class="font-heading font-bold text-white text-lg">Start Date</h3>
+            <p class="text-slate-300 text-sm mt-1 font-semibold">By Arrangement</p>
+            <p class="text-slate-400 text-xs mt-2">Available for new client projects immediately following initial scoping.</p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-6 border border-slate-800">
+            <div class="text-brand-400 mb-3">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            </div>
+            <h3 class="font-heading font-bold text-white text-lg">Global Clients</h3>
+            <p class="text-slate-300 text-sm mt-1 font-semibold">Remote Collaboration</p>
+            <p class="text-slate-400 text-xs mt-2">Meeting times arranged across time zones for international delivery.</p>
+          </div>
+
+        </div>
+
+        <div class="mt-8 p-4 rounded-xl bg-slate-800/40 border border-slate-700/60 text-slate-300 text-sm text-center">
+          For projects requiring additional support or different working hours, availability can be discussed in advance.
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. WORK LOCATION — Where I Work -->
+    <section id="location" class="py-20 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <p class="text-xs font-bold uppercase tracking-widest text-brand-400">Work Location — Where I Work</p>
+          <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white mt-2">
+            Based in South Africa. Working with Clients Worldwide.
+          </h2>
+          <p class="text-slate-300 mt-3 text-base">
+            I am based in <strong class="text-white font-semibold">Paarl, Western Cape, South Africa</strong>, and offer remote services to clients locally and internationally.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <div class="glass-card rounded-2xl p-6 border border-slate-800 hover:border-slate-700 transition-all">
+            <div class="text-emerald-400 font-heading font-extrabold text-2xl mb-2">Remote</div>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Available for web development, application development, automation, technical documentation, and remote troubleshooting worldwide.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-6 border border-slate-800 hover:border-slate-700 transition-all">
+            <div class="text-blue-400 font-heading font-extrabold text-2xl mb-2">On-site</div>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Available for selected IT support engagements in Paarl and the surrounding Winelands area, subject to scheduling.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-6 border border-slate-800 hover:border-slate-700 transition-all">
+            <div class="text-purple-400 font-heading font-extrabold text-2xl mb-2">Cape Town</div>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              On-site meetings, consultation, and technical support can be arranged where the project scope requires them.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-6 border border-slate-800 hover:border-slate-700 transition-all">
+            <div class="text-amber-400 font-heading font-extrabold text-2xl mb-2">Hybrid</div>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Available by agreement when a project benefits from a combination of remote delivery and in-person milestones.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="mt-10 p-5 rounded-2xl glass-card border border-brand-500/20 max-w-3xl mx-auto text-center">
+          <p class="text-slate-300 text-sm leading-relaxed">
+            <strong class="text-white">Remote-first delivery</strong> allows me to work with clients beyond my immediate location while maintaining clear communication, secure codebases, and documented project progress.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. WHY HIRE ME? — What Makes Me Different -->
+    <section id="why-hire-me" class="py-20 bg-slate-900/50 border-t border-b border-slate-800/80 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mb-12">
+          <p class="text-xs font-bold uppercase tracking-widest text-brand-400">Why Hire Me? — What Makes Me Different</p>
+          <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white mt-2">
+            Practical Skills. Clear Communication. Accountable Delivery.
+          </h2>
+          <p class="text-slate-300 mt-3 text-base">
+            I understand that technology should solve a problem, not create more work for your business. My approach is to understand what you need, identify the most practical solution, and deliver work that can be tested, used, and maintained.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <div class="glass-card rounded-2xl p-6 border border-slate-800 hover:border-brand-500/30 transition-all">
+            <div class="w-10 h-10 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center mb-4">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+            </div>
+            <h3 class="font-heading font-bold text-lg text-white mb-2">Practical Problem-Solving</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              I look beyond the immediate symptom to understand the underlying issue, preventing recurring technical headaches.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-6 border border-slate-800 hover:border-brand-500/30 transition-all">
+            <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center mb-4">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path></svg>
+            </div>
+            <h3 class="font-heading font-bold text-lg text-white mb-2">Broader Technical Perspective</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              My development and IT infrastructure background helps me consider application behaviour, connectivity, deployment, and security together.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-6 border border-slate-800 hover:border-brand-500/30 transition-all">
+            <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center mb-4">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+            </div>
+            <h3 class="font-heading font-bold text-lg text-white mb-2">Clear Communication</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              I explain technical decisions in straightforward language and keep clients regularly informed throughout project milestones.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-6 border border-slate-800 hover:border-brand-500/30 transition-all">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center mb-4">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+            </div>
+            <h3 class="font-heading font-bold text-lg text-white mb-2">Structured Delivery</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              I clarify requirements, agree on deliverables, track progress, and document important decisions before shipping.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-6 border border-slate-800 hover:border-brand-500/30 transition-all">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-4">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+            </div>
+            <h3 class="font-heading font-bold text-lg text-white mb-2">Security Awareness</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              My CompTIA Security+ (Distinction) and IT background inform my approach to application configuration, rules, and system reliability.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-6 border border-slate-800 hover:border-brand-500/30 transition-all">
+            <div class="w-10 h-10 rounded-xl bg-teal-500/10 text-teal-400 flex items-center justify-center mb-4">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            </div>
+            <h3 class="font-heading font-bold text-lg text-white mb-2">Business-Minded Thinking</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Having founded BC Computers and delivered client projects, I understand budgets, deadlines, and solutions that provide real commercial value.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="mt-12 text-center">
+          <p class="text-sm text-slate-400 font-medium tracking-wide">
+            "Understand the problem &bull; Agree on the scope &bull; Build the solution &bull; Test it &bull; Explain how it works."
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 7. RATES — How Much I Charge -->
+    <section id="rates" class="py-20 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <p class="text-xs font-bold uppercase tracking-widest text-brand-400">Rates — How Much I Charge</p>
+          <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white mt-2">
+            Transparent Starting Rates
+          </h2>
+          <p class="text-slate-300 mt-3 text-base">
+            I offer hourly services for flexible work and fixed-price packages for projects with clearly defined requirements. Final pricing depends on complexity, scope, integrations, and delivery requirements.
+          </p>
+        </div>
+
+        <!-- Hourly Rates Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+          
+          <div class="glass-card rounded-2xl p-6 border border-slate-800 text-center flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Hourly Service</span>
+              <h3 class="font-heading font-bold text-xl text-white mt-1">Full-Stack Development</h3>
+              <div class="my-5">
+                <span class="font-heading text-4xl font-extrabold text-brand-400">R370</span>
+                <span class="text-slate-400 text-sm font-medium"> / hour</span>
+              </div>
+              <p class="text-slate-300 text-xs leading-relaxed">
+                Frontend &amp; backend coding, custom features, API connections, and database integration.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-800/80">
+              <a href="#contact" class="block w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold text-xs transition-colors">Book Development</a>
+            </div>
+          </div>
+
+          <div class="glass-card rounded-2xl p-6 border-2 border-brand-500/40 bg-slate-900/90 text-center flex flex-col justify-between relative shadow-xl shadow-brand-500/5">
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-brand-500 text-slate-950 font-bold text-[10px] tracking-wide uppercase">
+              International
+            </div>
+            <div>
+              <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Hourly Service</span>
+              <h3 class="font-heading font-bold text-xl text-white mt-1">International Work</h3>
+              <div class="my-5">
+                <span class="font-heading text-4xl font-extrabold text-emerald-300">US$20</span>
+                <span class="text-slate-400 text-sm font-medium"> / hour</span>
+              </div>
+              <p class="text-slate-300 text-xs leading-relaxed">
+                Overseas development contracts billed in agreed contract currency across flexible time zones.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-800/80">
+              <a href="#contact" class="block w-full py-2.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-slate-950 font-bold text-xs transition-colors">Engage Remotely</a>
+            </div>
+          </div>
+
+          <div class="glass-card rounded-2xl p-6 border border-slate-800 text-center flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Hourly Service</span>
+              <h3 class="font-heading font-bold text-xl text-white mt-1">IT Support &amp; Troubleshooting</h3>
+              <div class="my-5">
+                <span class="font-heading text-4xl font-extrabold text-purple-400">R450</span>
+                <span class="text-slate-400 text-sm font-medium"> / hour</span>
+              </div>
+              <p class="text-slate-300 text-xs leading-relaxed">
+                Windows diagnostics, hardware troubleshooting, network connectivity, and technical maintenance.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-800/80">
+              <a href="#contact" class="block w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold text-xs transition-colors">Request Support</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Project Packages Grid -->
+        <div class="mb-12">
+          <div class="max-w-xl mx-auto text-center mb-8">
+            <h3 class="font-heading font-bold text-2xl text-white">Project Packages</h3>
+            <p class="text-slate-400 text-sm mt-1">Fixed-price packages for clear, defined requirements.</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Package 1 -->
+            <div class="glass-card rounded-2xl p-7 border border-slate-800 flex flex-col justify-between">
+              <div>
+                <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-[11px] font-semibold">Starter Package</span>
+                <h4 class="font-heading font-bold text-xl text-white mt-3">Basic Business Landing Page</h4>
+                <div class="mt-4 mb-5">
+                  <span class="font-heading text-3xl font-extrabold text-white">R3,500</span>
+                  <span class="text-slate-400 text-xs block mt-1">Once-off build &amp; deploy</span>
+                </div>
+                <p class="text-slate-300 text-xs leading-relaxed mb-4">
+                  A professional starting point for a small business that needs a clear online presence.
+                </p>
+                <div class="text-xs font-semibold text-slate-200 mb-2">Includes:</div>
+                <ul class="space-y-2 text-xs text-slate-300">
+                  <li class="flex items-start gap-2">&bull; <span>Responsive HTML, CSS, and JavaScript website</span></li>
+                  <li class="flex items-start gap-2">&bull; <span>Business information &amp; service presentation</span></li>
+                  <li class="flex items-start gap-2">&bull; <span>Contact or quote-request form</span></li>
+                  <li class="flex items-start gap-2">&bull; <span>WhatsApp integration</span></li>
+                  <li class="flex items-start gap-2">&bull; <span>Basic SEO setup</span></li>
+                  <li class="flex items-start gap-2">&bull; <span>Deployment to an agreed hosting platform</span></li>
+                </ul>
+              </div>
+              <div class="mt-8 pt-5 border-t border-slate-800">
+                <a href="#contact" class="block w-full text-center py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold text-xs transition-colors">Select Landing Page</a>
+              </div>
+            </div>
+
+            <!-- Package 2 -->
+            <div class="glass-card rounded-2xl p-7 border-2 border-brand-500/40 bg-slate-900/90 flex flex-col justify-between relative shadow-xl shadow-brand-500/5">
+              <div class="absolute -top-3 right-6 px-3 py-0.5 rounded-full bg-brand-500 text-slate-950 font-bold text-[10px] uppercase tracking-wider">
+                Recommended
+              </div>
+              <div>
+                <span class="px-2.5 py-1 rounded-md bg-brand-500/20 text-brand-300 text-[11px] font-semibold">Custom Solution</span>
+                <h4 class="font-heading font-bold text-xl text-white mt-3">Custom Web Application</h4>
+                <div class="mt-4 mb-5">
+                  <span class="font-heading text-3xl font-extrabold text-brand-400">From R8,500</span>
+                  <span class="text-slate-400 text-xs block mt-1">Scope-dependent delivery</span>
+                </div>
+                <p class="text-slate-300 text-xs leading-relaxed mb-4">
+                  For businesses that need more than a standard website to run their operational workflow.
+                </p>
+                <div class="text-xs font-semibold text-slate-200 mb-2">Includes (per agreed scope):</div>
+                <ul class="space-y-2 text-xs text-slate-300">
+                  <li class="flex items-start gap-2">&bull; <span>Custom frontend and backend development</span></li>
+                  <li class="flex items-start gap-2">&bull; <span>Python/FastAPI or PHP backend implementation</span></li>
+                  <li class="flex items-start gap-2">&bull; <span>Firebase, Cloud Firestore, or SQL database</span></li>
+                  <li class="flex items-start gap-2">&bull; <span>Authentication &amp; access controls where required</span></li>
+                  <li class="flex items-start gap-2">&bull; <span>Application testing &amp; deployment</span></li>
+                  <li class="flex items-start gap-2">&bull; <span>Technical handover documentation</span></li>
+                </ul>
+              </div>
+              <div class="mt-8 pt-5 border-t border-slate-800">
+                <a href="#contact" class="block w-full text-center py-2.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-slate-950 font-bold text-xs transition-colors">Start Custom Build</a>
+              </div>
+            </div>
+
+            <!-- Package 3 -->
+            <div class="glass-card rounded-2xl p-7 border border-slate-800 flex flex-col justify-between">
+              <div>
+                <span class="px-2.5 py-1 rounded-md bg-purple-500/20 text-purple-300 text-[11px] font-semibold">Technical Support</span>
+                <h4 class="font-heading font-bold text-xl text-white mt-3">IT Support &amp; Diagnostics</h4>
+                <div class="mt-4 mb-5">
+                  <span class="font-heading text-3xl font-extrabold text-white">R450 / hr</span>
+                  <span class="text-slate-400 text-xs block mt-1">Flexible hourly or retainer</span>
+                </div>
+                <p class="text-slate-300 text-xs leading-relaxed mb-4">
+                  Practical technical assistance for businesses and individuals experiencing tech hurdles.
+                </p>
+                <div class="text-xs font-semibold text-slate-200 mb-2">Includes applicable services:</div>
+                <ul class="space-y-2 text-xs text-slate-300">
+                  <li class="flex items-start gap-2">&bull; <span>Windows and software troubleshooting</span></li>
+                  <li class="flex items-start gap-2">&bull; <span>Network &amp; connectivity diagnostics</span></li>
+                  <li class="flex items-start gap-2">&bull; <span>DNS, VPN, and remote access troubleshooting</span></li>
+                  <li class="flex items-start gap-2">&bull; <span>Hardware diagnostics</span></li>
+                  <li class="flex items-start gap-2">&bull; <span>Clear recommendations &amp; documentation</span></li>
+                </ul>
+              </div>
+              <div class="mt-8 pt-5 border-t border-slate-800">
+                <a href="#contact" class="block w-full text-center py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold text-xs transition-colors">Book IT Support</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Pricing Policy Callout -->
+        <div class="max-w-4xl mx-auto p-6 rounded-2xl bg-slate-900 border border-slate-800 text-slate-300 text-xs sm:text-sm leading-relaxed space-y-2">
+          <h4 class="font-heading font-bold text-white text-base">How Project Pricing Works</h4>
+          <p>
+            Fixed-price packages include only the deliverables agreed upon before work begins. Additional functionality, substantial design changes, ongoing maintenance, hosting charges, and third-party subscriptions may require separate pricing.
+          </p>
+          <p class="text-slate-400 text-xs">
+            International rates are billed in the agreed contract currency. Rand equivalents vary with exchange rates. Platform fees, applicable taxes, and approved third-party costs are separate. Before accepting a project, I clarify requirements, expected outcomes, timeline, and applicable costs so that both parties understand what is included.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 8. CONTACT — Let's Discuss Your Project -->
+    <section id="contact" class="py-20 bg-slate-900/60 border-t border-slate-800/80 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          
+          <!-- Contact Left: Direct Channels & Context -->
+          <div class="lg:col-span-5 space-y-8">
+            <div>
+              <p class="text-xs font-bold uppercase tracking-widest text-brand-400">Contact — Let's Discuss Your Project</p>
+              <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white mt-2">
+                Have a Project in Mind?
+              </h2>
+              <p class="text-slate-300 mt-4 text-sm sm:text-base leading-relaxed">
+                Whether you need a new website, a custom application, business automation, or help resolving a technical problem, I'd like to understand what you're trying to achieve.
+              </p>
+              <p class="text-slate-400 mt-3 text-sm leading-relaxed">
+                Tell me what your business needs, what is currently getting in the way, and what outcome you want. I'll review the requirements and discuss a practical next step with you.
+              </p>
+            </div>
+
+            <!-- Direct Channel Badges -->
+            <div class="space-y-4">
+              
+              <!-- Email -->
+              <a href="mailto:daylonnaidoo53@gmail.com" class="flex items-center gap-4 p-4 rounded-xl glass-card border border-slate-800 hover:border-brand-500/40 transition-colors group">
+                <div class="w-10 h-10 rounded-lg bg-brand-500/10 text-brand-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                </div>
+                <div>
+                  <span class="text-xs text-slate-400 block font-medium">Direct Email</span>
+                  <span class="text-sm font-semibold text-white group-hover:text-brand-300 transition-colors">daylonnaidoo53@gmail.com</span>
+                </div>
+              </a>
+
+              <!-- Phone / WhatsApp -->
+              <a href="https://wa.me/27832542999?text=Hi%20Daylon!%20I%20would%20like%20to%20discuss%20a%20project%20enquiry." target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 rounded-xl glass-card border border-slate-800 hover:border-emerald-500/40 transition-colors group">
+                <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                </div>
+                <div>
+                  <span class="text-xs text-slate-400 block font-medium">Phone / WhatsApp</span>
+                  <span class="text-sm font-semibold text-white group-hover:text-emerald-300 transition-colors">083 254 2999 (+27)</span>
+                </div>
+              </a>
+
+              <!-- Location & Portfolio -->
+              <div class="p-4 rounded-xl glass-card border border-slate-800 space-y-1">
+                <div class="text-xs text-slate-400 font-medium">Headquarters</div>
+                <div class="text-sm font-semibold text-white">Paarl, Western Cape, South Africa</div>
+                <div class="text-xs text-slate-500 pt-1">
+                  Live Portfolio: <a href="https://daylon-naidoo-portfolio-za.web.app" target="_blank" rel="noopener" class="text-brand-400 hover:underline">daylon-naidoo-portfolio-za.web.app</a>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 text-xs text-slate-400 leading-relaxed">
+              &bull; I review every enquiry personally within business hours and respond with feasibility, questions, and realistic next steps.
+            </div>
+          </div>
+
+          <!-- Contact Right: Project Enquiry Form -->
+          <div class="lg:col-span-7">
+            <div class="glass-card rounded-2xl p-6 sm:p-8 border border-slate-800 shadow-2xl">
+              
+              <h3 class="font-heading font-bold text-2xl text-white mb-2">Project Enquiry Form</h3>
+              <p class="text-xs sm:text-sm text-slate-400 mb-6">
+                Fill in the details below and I'll get back to you to schedule an initial scoping chat.
+              </p>
+
+              <!-- Success Alert Banner -->
+              <div id="form-success-banner" class="hidden mb-6 p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-sm flex items-start gap-3" role="status" aria-live="polite">
+                <svg class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                <div>
+                  <strong class="font-semibold block text-white">Thank you! Your enquiry has been received.</strong>
+                  <span>I will review your requirements and respond promptly. Let's build something useful.</span>
+                </div>
+              </div>
+
+              <!-- Error Alert Banner -->
+              <div id="form-error-banner" class="hidden mb-6 p-4 rounded-xl bg-rose-500/10 border border-rose-500/30 text-rose-300 text-sm flex items-start gap-3" role="alert" aria-live="assertive">
+                <svg class="w-5 h-5 text-rose-400 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                <div id="form-error-text">
+                  Please review the form and fill in all required fields.
+                </div>
+              </div>
+
+              <!-- Form Element -->
+              <form id="project-enquiry-form" class="space-y-4" novalidate>
+                
+                <!-- Full Name & Email -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="form-name" class="block text-xs font-semibold text-slate-300 mb-1.5">
+                      Full Name <span class="text-brand-400">*</span>
+                    </label>
+                    <input type="text" id="form-name" name="name" required placeholder="Your full name" class="w-full px-4 py-2.5 rounded-xl bg-slate-950/80 border border-slate-700 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors" />
+                  </div>
+                  <div>
+                    <label for="form-email" class="block text-xs font-semibold text-slate-300 mb-1.5">
+                      Email Address <span class="text-brand-400">*</span>
+                    </label>
+                    <input type="email" id="form-email" name="email" required placeholder="your.name@company.com" class="w-full px-4 py-2.5 rounded-xl bg-slate-950/80 border border-slate-700 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors" />
+                  </div>
+                </div>
+
+                <!-- Business Name & Service Required -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="form-business" class="block text-xs font-semibold text-slate-300 mb-1.5">
+                      Business Name <span class="text-slate-500 text-[11px] font-normal">(Optional)</span>
+                    </label>
+                    <input type="text" id="form-business" name="businessName" placeholder="Your business or company" class="w-full px-4 py-2.5 rounded-xl bg-slate-950/80 border border-slate-700 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors" />
+                  </div>
+                  <div>
+                    <label for="form-service" class="block text-xs font-semibold text-slate-300 mb-1.5">
+                      Service Required <span class="text-brand-400">*</span>
+                    </label>
+                    <select id="form-service" name="serviceRequired" required class="w-full px-4 py-2.5 rounded-xl bg-slate-950/80 border border-slate-700 text-white text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors">
+                      <option value="" disabled selected>Select a service</option>
+                      <option value="Website Development">Website Development</option>
+                      <option value="Custom Web Application">Custom Web Application</option>
+                      <option value="Automation">Automation &amp; Workflow</option>
+                      <option value="IT Support">IT Support &amp; Troubleshooting</option>
+                      <option value="Data Organisation">Data Organisation &amp; Documentation</option>
+                      <option value="Other">Other / General Consultation</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Subject & Estimated Budget -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="form-subject" class="block text-xs font-semibold text-slate-300 mb-1.5">
+                      Subject <span class="text-brand-400">*</span>
+                    </label>
+                    <input type="text" id="form-subject" name="subject" required placeholder="e.g. New E-commerce Site / Office IT" class="w-full px-4 py-2.5 rounded-xl bg-slate-950/80 border border-slate-700 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors" />
+                  </div>
+                  <div>
+                    <label for="form-budget" class="block text-xs font-semibold text-slate-300 mb-1.5">
+                      Estimated Budget <span class="text-slate-500 text-[11px] font-normal">(Optional)</span>
+                    </label>
+                    <select id="form-budget" name="estimatedBudget" class="w-full px-4 py-2.5 rounded-xl bg-slate-950/80 border border-slate-700 text-white text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors">
+                      <option value="Not Specified">Select budget range (optional)</option>
+                      <option value="Under R3,500">Under R3,500 (Small fix / Support)</option>
+                      <option value="R3,500 – R8,500">R3,500 – R8,500 (Landing Page / Basic Site)</option>
+                      <option value="R8,500 – R20,000">R8,500 – R20,000 (Custom Web App)</option>
+                      <option value="R20,000+">R20,000+ (Full Suite / Ongoing Contract)</option>
+                      <option value="International (USD)">International / USD Pricing</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Project Details / Message -->
+                <div>
+                  <label for="form-details" class="block text-xs font-semibold text-slate-300 mb-1.5">
+                    Project Details &amp; Message <span class="text-brand-400">*</span>
+                  </label>
+                  <textarea id="form-details" name="projectDetails" rows="4" required minlength="10" placeholder="Describe the problem, your requirements, and the outcome you're looking for..." class="w-full px-4 py-2.5 rounded-xl bg-slate-950/80 border border-slate-700 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="pt-2">
+                  <button type="submit" id="form-submit-btn" class="w-full py-3.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-slate-950 font-bold text-sm tracking-wide transition-all shadow-lg shadow-brand-500/20 hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-2">
+                    <span id="btn-text">Send Project Enquiry</span>
+                    <svg id="btn-spinner" class="w-4 h-4 text-slate-950 animate-spin hidden" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path></svg>
+                  </button>
+                </div>
+
+                <p class="text-[11px] text-slate-500 text-center">
+                  All submitted information is kept strictly confidential and used solely to respond to your project request.
+                </p>
+
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-slate-950 border-t border-slate-900 py-12 text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-900">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-brand-500 flex items-center justify-center text-slate-950 font-heading font-extrabold text-sm">
+            DN
+          </div>
+          <div>
+            <div class="font-heading font-bold text-sm text-white">Daylon Naidoo</div>
+            <div class="text-[11px] text-slate-500">Full-Stack Developer &amp; IT Specialist &bull; Paarl, South Africa</div>
+          </div>
+        </div>
+
+        <nav class="flex flex-wrap justify-center gap-4 text-xs font-medium text-slate-400" aria-label="Footer Navigation">
+          <a href="#home" class="hover:text-brand-400 transition-colors">Home</a>
+          <a href="#about" class="hover:text-brand-400 transition-colors">About</a>
+          <a href="#services" class="hover:text-brand-400 transition-colors">Services</a>
+          <a href="#availability" class="hover:text-brand-400 transition-colors">Availability</a>
+          <a href="#location" class="hover:text-brand-400 transition-colors">Location</a>
+          <a href="#why-hire-me" class="hover:text-brand-400 transition-colors">Why Hire Me</a>
+          <a href="#rates" class="hover:text-brand-400 transition-colors">Rates</a>
+          <a href="#contact" class="hover:text-brand-400 transition-colors">Contact</a>
+        </nav>
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+        <div>
+          &copy; <span id="current-year">2026</span> Daylon Naidoo &bull; BC Computers. All rights reserved.
+        </div>
+        <div class="flex items-center gap-4 text-slate-500">
+          <a href="mailto:daylonnaidoo53@gmail.com" class="hover:text-slate-300 transition-colors">daylonnaidoo53@gmail.com</a>
+          <span>&bull;</span>
+          <a href="https://wa.me/27832542999" class="hover:text-emerald-400 transition-colors">+27 83 254 2999</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script type="module" src="app.js"></script>
 </body>
 </html>
